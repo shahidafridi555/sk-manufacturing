@@ -332,4 +332,47 @@
         
     </script>
 </body>
+
+    <script>
+    let currentProductName = "";
+    let currentUnitPrice = 0;
+
+    function selectProduct(name, price) {
+        currentProductName = name;
+        currentUnitPrice = price;
+        updateTotal();
+        alert(name + " has been selected! Please check the checkout form below.");
+        window.location.href = '#order';
+    }
+
+    function updateTotal() {
+        let qty = document.getElementById('quantityInput').value;
+        if (currentProductName === "") {
+            document.getElementById('selectedProduct').value = "Please select a product from above first";
+        } else {
+            let totalPrice = currentUnitPrice * qty;
+            document.getElementById('selectedProduct').value = currentProductName + " (Qty: " + qty + ") - Total: PKR " + totalPrice;
+        }
+    }
+
+    function togglePaymentDetails() {
+        var method = document.getElementById('paymentMethod').value;
+        var box = document.getElementById('paymentInstructions');
+        var bankInfo = document.getElementById('bankInfo');
+        var mobileInfo = document.getElementById('mobileInfo');
+
+        if (method === 'Cash on Delivery (COD)') {
+            box.style.display = 'none';
+        } else {
+            box.style.display = 'block';
+            if (method === 'Direct Bank Transfer') {
+                bankInfo.style.display = 'block';
+                mobileInfo.style.display = 'none';
+            } else if (method === 'JazzCash / EasyPaisa') {
+                bankInfo.style.display = 'none';
+                mobileInfo.style.display = 'block';
+            }
+        }
+    }
+</script>
 </html>
