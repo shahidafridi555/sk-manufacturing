@@ -188,7 +188,7 @@
         <!-- Online Checkout Section -->
         <section id="order">
             <h2 data-en="Online Secure Checkout & Payment" data-ur="آن لائن سیکیور چیک آؤٹ اور ادائیگی" data-ar="الدفع والشراء الآمن عبر الإنترنت">Online Secure Checkout & Payment</h2>
-            <form onsubmit="handleOrder(event)">
+           <form action="https://formspree.io/f/xaeqagoe" method="POST">
                 <div class="form-group">
                     <label data-en="Selected Product:" data-ur="منتخب کردہ پروڈکٹ:" data-ar="المنتج المحدد:">Selected Product:</label>
                     <input type="text" id="selectedProduct" value="Please select a product from above first" readonly style="background: #e2e8f0;">
@@ -199,7 +199,7 @@
                 </div>
                 <div class="form-group">
                     <label data-en="Mobile Number:" data-ur="موبائل نمبر:" data-ar="رقم الجوال:">Mobile Number:</label>
-                    <input type="text" required placeholder="03XXXXXXXXX">
+                    <input type="text" required placeholder="03432457398">
                 </div>
                 <div class="form-group">
                     <label data-en="Delivery Address:" data-ur="ڈیلیوری کا پتہ:" data-ar="عنوان التوصيل:">Delivery Address:</label>
