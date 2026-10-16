@@ -188,19 +188,26 @@
         <!-- Online Checkout Section -->
         <section id="order">
             <h2 data-en="Online Secure Checkout & Payment" data-ur="آن لائن سیکیور چیک آؤٹ اور ادائیگی" data-ar="الدفع والشراء الآمن عبر الإنترنت">Online Secure Checkout & Payment</h2>
-           <form action="https://formspree.io/f/xaeqagoe" method="POST">
-                <div class="form-group">
-                    <label data-en="Selected Product:" data-ur="منتخب کردہ پروڈکٹ:" data-ar="المنتج المحدد:">Selected Product:</label>
-                    <input type="text" id="selectedProduct" value="Please select a product from above first" readonly style="background: #e2e8f0;">
-                </div>
-                <div class="form-group">
-                    <label data-en="Full Name:" data-ur="पूरा نام (Full Name):" data-ar="الاسم الكامل:">Full Name:</label>
-                    <input type="text" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label data-en="Mobile Number:" data-ur="موبائل نمبر:" data-ar="رقم الجوال:">Mobile Number:</label>
-                    <input type="text" required placeholder="03432457398">
-                </div>
+          <form action="https://formspree.io/f/xaeqagoe" method="POST">
+    <div class="form-group">
+        <label data-en="Selected Product:" data-ur="منتخب کردہ پروڈکٹ:" data-ar="المنتج المحدد:">Selected Product:</label>
+        <input type="text" id="selectedProduct" name="Selected_Product" value="Please select a product from above first" readonly style="background: #e2e8f0; font-weight: bold;">
+    </div>
+
+    <div class="form-group">
+        <label data-en="Quantity:" data-ur="مقدار (Quantity):" data-ar="الكمية:">Quantity:</label>
+        <input type="number" name="Quantity" value="1" min="1" max="100" required style="font-weight: bold;">
+    </div>
+
+    <div class="form-group">
+        <label data-en="Full Name:" data-ur="पूरा نام (Full Name):" data-ar="الاسم الكامل:">Full Name:</label>
+        <input type="text" name="Customer_Name" required placeholder="Enter your full name">
+    </div>
+
+    <div class="form-group">
+        <label data-en="Mobile Number:" data-ur="موبائل نمبر:" data-ar="رقم الجوال:">Mobile Number:</label>
+        <input type="text" name="Mobile_Number" required placeholder="03432457398">
+    </div>
                 <div class="form-group">
                     <label data-en="Delivery Address:" data-ur="ڈیلیوری کا پتہ:" data-ar="عنوان التوصيل:">Delivery Address:</label>
                     <textarea rows="2" required placeholder="Enter your complete delivery address"></textarea>
