@@ -22,7 +22,8 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        /* Header */
+        
+        /* Header ****************************************************************************/
         header {
             background: var(--primary-color);
             color: white;
@@ -87,7 +88,8 @@
             font-weight: bold;
             cursor: pointer;
         }
-        /* Hero Section */
+        
+        /* Hero Section ******************************************************************/
         .hero {
             background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)), url('HeaderImage.png') no-repeat center center/cover;
             color: white;
@@ -234,7 +236,7 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header ----------------------------------------------------------------------------->
     <header>
         <a href="#" class="logo-container">
             <img src="sklogo.png" alt="SK Manufacturing Logo">
@@ -258,7 +260,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section ---------------------------------------------------------------------------->
     <div class="hero">
         <h1 data-en="SK Manufacturing" data-ur="ایس کے مینوفیکچرنگ" data-ar="تصنيع SK">SK Manufacturing</h1>
         <p data-en="Your trusted partner for high-quality everyday cleaning and personal care products including Dishwashers, Hand Washes, and Soaps." data-ur="گھر کی صفائی اور ذاتی نگداشت کی اعلیٰ معیار کی مصنوعات جیسے ڈش واشر، ہینڈ واش اور صابن کا قابل اعتماد مرکز۔" data-ar="شريكك الموثوق منتجات التنظيف والعناية الشخصية عالية الجودة بما في ذلك غسالات الصحون وغسولات اليدين والصابون.">
@@ -269,7 +271,7 @@
 
     <div class="container">
         
-        <!-- Factory Profile -->
+        <!-- Factory Profile ------------------------------------------------------------------------>
         <section id="about">
             <h2 data-en="Factory Profile" data-ur="فیکٹری پروفائل" data-ar="ملف المصنع">Factory Profile</h2>
             <p data-en="SK Manufacturing is a premier production unit dedicated to manufacturing top-tier hygiene and cleaning items for household and commercial use. Our products, ranging from powerful dishwashers and gentle hand washes to premium herbal soaps, ensure absolute safety and spotless cleaning standards." data-ur="ایس کے مینوفیکچرنگ ایک ایسی پروڈکشن یونٹ ہے جو گھروں اور تجارتی استعمال کے لیے اعلیٰ معیار کی صفائی کی اشیاء تیار کرتی ہے۔ ہمارے طاقتور ڈش واشر، ہینڈ واش اور صابن بہترین صفائی اور تحفظ کی ضمانت دیتے ہیں۔" data-ar="تصنيع SK هي وحدة إنتاج رائدة مخصصة لتصنيع مواد النظافة والتنظيف من الدرجة الأولى للاستخدام المنزلي والتجاري.">
@@ -277,7 +279,7 @@
             </p>
         </section>
 
-        <!-- Products Section (8 Products) -->
+        <!-- Products Section (8 Products) ---------------------------------------------------------->
         <section id="products">
             <h2 data-en="Products for Everyday Cleaning" data-ur="روزمرہ صفائی کی مصنوعات" data-ar="منتجات التنظيف اليومي">Products for Everyday Cleaning</h2>
             <div class="product-grid">
@@ -306,10 +308,11 @@
                 </div>
 
                 <div class="product-card">
+                     <img src="pexels-photo-HandWash" alt="HandWash Liquid 200ml" style="width: 100%; height: 160px; object-fit: contain; margin-bottom: 10px;">
                     <h3 data-en="Antibacterial Hand Wash" data-ur="اینٹی بیکٹیریل ہینڈ واش" data-ar="غسول اليدين المضاد للبكتيريا">Antibacterial Hand Wash (500ml)</h3>
                     <p data-en="Eliminates 99.9% of germs while keeping your hands soft and moisturized." data-ur="جراثیم کا 99.9% خاتمہ کرے اور ہاتھوں کو نرم رکھے۔" data-ar="يقضي على 99.9% من الجراثيم مع الحفاظ على نعومة يديك.">Eliminates 99.9% of germs while keeping your hands soft and moisturized.</p>
-                    <div class="price">PKR 280</div>
-                    <button class="btn" onclick="selectProduct('SK Antibacterial Hand Wash (500ml)', 280)" data-en="Order Inquiry" data-ur="آرڈر کریں" data-ar="طلب استعلام">Order Inquiry</button>
+                    <div class="price">PKR 200</div>
+                    <button class="btn" onclick="selectProduct('SK Antibacterial Hand Wash (200ml)', 200)" data-en="Order Inquiry" data-ur="آرڈر کریں" data-ar="طلب استعلام">Order Inquiry</button>
                 </div>
 
                 <div class="product-card">
@@ -335,7 +338,7 @@
             </div>
         </section>
 
-        <!-- Workflow Section -->
+        <!-- Workflow Section ----------------------------------------------------------------------->
         <section id="workflow">
             <h2 data-en="Inquiry to Delivery Workflow" data-ur="آرڈر سے ڈیلیوری کا طریقہ کار" data-ar="سیر العمل الطلب إلى التسليم">Inquiry to Delivery Workflow</h2>
             <div class="steps-grid">
@@ -358,7 +361,7 @@
             </div>
         </section>
 
-        <!-- Online Secure Checkout & Payment -->
+        <!-- Online Secure Checkout & Payment ------------------------------------------------------------->
         <section id="order">
             <h2 data-en="Online Secure Checkout & Payment" data-ur="آن لائن سیکیور چیک آؤٹ اور ادائیگی" data-ar="الدفع والشراء الآمن عبر الإنترنت">Online Secure Checkout & Payment</h2>
             <form action="https://formspree.io/f/xaeqagoe" method="POST">
@@ -401,7 +404,7 @@
             </form>
         </section>
 
-        <!-- Contact & Complaint Desk -->
+        <!-- Contact & Complaint Desk ------------------------------------------------------------->
         <section id="contact">
             <h2 data-en="Contact & Complaint Desk" data-ur="رابطہ اور شکایت ڈیسک" data-ar="مكتب الاتصال والشكاوى">Contact & Complaint Desk</h2>
             <p data-en="Have any questions or complaints? Fill out the form below to send us a direct email." data-ur="کوئی سوال یا شکایت ہے؟ ہمیں براہ راست ای میل بھیجنے کے لیے نیچے دیا گیا فارم پُر کریں۔" data-ar="هل لديك أي أسئلة أو شكاوى؟ املأ النموذج أدناه لإرسال بريد إلكتروني مباشر إلينا.">
@@ -420,7 +423,7 @@
         </section>
     </div>
 
-    <!-- Footer with PayFast Policies -->
+    <!-- Footer with PayFast Policies ---------------------------------------------------------------->
     <footer>
         <p data-en="&copy; 2026 SK Manufacturing (SMC-Private) Limited. All Rights Reserved." data-ur="&copy; 2026 ایس کے مینوفیکچرنگ۔ جملہ حقوق محفوظ ہیں۔" data-ar="&copy; 2026 تصنيع SK. جميع الحقوق محفوظة.">
             &copy; 2026 SK Manufacturing (SMC-Private) Limited. All Rights Reserved.
@@ -434,7 +437,7 @@
         </div>
     </footer>
 
-    <!-- POLICY MODAL -->
+    <!-- POLICY MODAL ----------------------------------------------------------------------------------->
     <div id="policyModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
         <div style="background:#fff; color:#333; padding:25px; width:90%; max-width:600px; max-height:80vh; overflow-y:auto; border-radius:8px; position:relative;">
             <button onclick="closePolicy()" style="position:absolute; top:10px; right:15px; background:red; color:#fff; border:none; padding:5px 10px; cursor:pointer; border-radius:4px;">X</button>
@@ -442,7 +445,7 @@
         </div>
     </div>
 
-    <!-- JavaScript Section -->
+    <!-- JavaScript Section --------------------------------------------------------------------------------->
     <script>
         function changeLanguage(lang) {
             const elements = document.querySelectorAll('[data-en]');
