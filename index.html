@@ -285,33 +285,35 @@
     }
 
     function updateTotal() {
-        var qty = document.getElementById('quantityInput').value;
+        var qtyElement = document.getElementById('quantityInput');
+        var qty = qtyElement ? qtyElement.value : 1;
         if (qty < 1) qty = 1;
         var total = unitPrice * qty;
-        if (currentProductName) {
-            document.getElementById('selectedProduct').value = currentProductName + " (Qty: " + qty + ") - Total: PKR " + total;
-        } else {
-            document.getElementById('selectedProduct').value = "Please select a product from above first";
+        var selectedProductField = document.getElementById('selectedProduct');
+        if (selectedProductField) {
+            if (currentProductName) {
+                selectedProductField.value = currentProductName + " (Qty: " + qty + ") - Total: PKR " + total;
+            } else {
+                selectedProductField.value = "Please select a product from above first";
+            }
         }
     }
 
     function togglePaymentDetails() {
-    var method = document.getElementById('paymentMethod').value;
-    var box = document.getElementById('paymentInstructions');
-    var jazzcashInfo = document.getElementById('jazzcashInfo');
-    var easypaisaInfo = document.getElementById('easypaisaInfo');
-    var bankInfo = document.getElementById('bankInfo');
+        var method = document.getElementById('paymentMethod').value;
+        var box = document.getElementById('paymentInstructions');
+        var jazzcashInfo = document.getElementById('jazzcashInfo');
+        var easypaisaInfo = document.getElementById('easypaisaInfo');
+        var bankInfo = document.getElementById('bankInfo');
 
-    if (method === 'cod') {
-        box.style.display = 'none';
-    } else {
-        box.style.display = 'block';
-        jazzcashInfo.style.display = (method === 'jazzcash') ? 'block' : 'none';
-        easypaisaInfo.style.display = (method === 'easypaisa') ? 'block' : 'none';
-        bankInfo.style.display = (method === 'bank') ? 'block' : 'none';
-    }
-}
-
+        if (method === 'cod') {
+            if (box) box.style.display = 'none';
+        } else {
+            if (box) box.style.display = 'block';
+            if (jazzcashInfo) jazzcashInfo.style.display = (method === 'jazzcash') ? 'block' : 'none';
+            if (easypaisaInfo) easypaisaInfo.style.display = (method === 'easypaisa') ? 'block' : 'none';
+            if (bankInfo) bankInfo.style.display = (method === 'bank') ? 'block' : 'none';
+        }
     }
 </script>
 </html>
