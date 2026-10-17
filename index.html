@@ -216,15 +216,17 @@
                     <label data-en="Payment Method:" data-ur="ادائیگی کا طریقہ:" data-ar="طريقة الدفع:">Payment Method:</label>
                     <select id="paymentMethod" onchange="togglePaymentDetails()">
                         <option value="cod" data-en="Cash on Delivery (COD)" data-ur="کیش آن ڈیلیوری (COD)" data-ar="الدفع عند الاستلام">Cash on Delivery (COD)</option>
+                        <option value="jazzcash" data-en="JazzCash" data-ur="جاز کیش" data-ar="جاز كاش">JazzCash</option>
+                        <option value="easypaisa" data-en="EasyPaisa" data-ar="إيزي بيسا">EasyPaisa</option>
                         <option value="bank" data-en="Direct Bank Transfer" data-ur="ڈائریکٹ بینک ٹرانسفر" data-ar="تحويل مصرفي مباشر">Direct Bank Transfer</option>
-                        <option value="jazzcash" data-en="JazzCash / EasyPaisa / PayPass" data-ur="جاز کیش / ایزی پیسہ" data-ar="جاز كاش / إيزي بيسا">JazzCash / EasyPaisa / PayPass</option>
                     </select>
                 </div>
-                <div id="paymentInstructions" class="checkout-box" style="display:none;">
-                    <p id="bankInfo"><strong data-en="Bank Details:" data-ur="بینک کی تفصیلات:" data-ar="تفاصيل البنك:">Bank Details:</strong> Meezan Bank - SK Manufacturing (A/C: 1234-567890-001)</p>
-                    <p id="mobileInfo" style="display:none;"><strong data-en="Mobile Account:" data-ur="موبائل اکاؤنٹ:" data-ar="الحساب المحمول:">Mobile Account:</strong> JazzCash / EasyPaisa - 0300-1234567 (SK Manufacturing)</p>
-                </div>
-                <br>
+              <div id="paymentInstructions" class="checkout-box" style="display:none;">
+                  <p id="jazzcashInfo" style="display:none;"><strong data-en="JazzCash Account:" data-ur="جاز کیش اکاؤنٹ:" data-ar="حساب جاز كاش:">JazzCash Account:</strong> 03432457398 (SK Manufacturing)</p>
+                  <p id="easypaisaInfo" style="display:none;"><strong data-en="EasyPaisa Account:" data-ur="ایزی پیسہ اکاؤنٹ:" data-ar="حساب إيزي بيسا:">EasyPaisa Account:</strong> 03432457398 (SK Manufacturing)</p>
+                  <p id="bankInfo" style="display:none;"><strong data-en="Bank Details:" data-ur="بینک کی تفصیلات:" data-ar="تفاصيل البنك:">Bank Details:</strong> Meezan Bank - SK Manufacturing (A/C: 0109-0102921-712)</p>
+              </div>
+              <br>
                 <button type="submit" class="btn" data-en="Confirm Order" data-ur="آرڈر کی تصدیق کریں" data-ar="تأكيد الطلب">Confirm Order</button>
             </form>
         </section>
