@@ -257,51 +257,60 @@
     </footer>
 
     <!-- Custom Translation Script -->
-    <script>
-        function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[data-en]');
-            elements.forEach(el => {
-                if (lang === 'ur' && el.getAttribute('data-ur')) {
-                    el.innerText = el.getAttribute('data-ur');
-                } else if (lang === 'ar' && el.getAttribute('data-ar')) {
-                    el.innerText = el.getAttribute('data-ar');
-                } else {
-                    el.innerText = el.getAttribute('data-en');
-                }
-            });
-        }
-
-        function selectProduct(name, price) {
-            document.getElementById('selectedProduct').value = name + " - PKR " + price;
-            alert(name + " has been selected! Please fill in your delivery details in the checkout form below.");
-            window.location.href = '#order';
-        }
-        
-
-        function togglePaymentDetails() {
-            var method = document.getElementById('paymentMethod').value;
-            var box = document.getElementById('paymentInstructions');
-            var bankInfo = document.getElementById('bankInfo');
-            var mobileInfo = document.getElementById('mobileInfo');
-
-            if (method === 'cod') {
-                box.style.display = 'none';
+   <script>
+    function changeLanguage(lang) {
+        const elements = document.querySelectorAll('[data-en]');
+        elements.forEach(el => {
+            if (lang === 'ur' && el.getAttribute('data-ur')) {
+                el.innerText = el.getAttribute('data-ur');
+            } else if (lang === 'ar' && el.getAttribute('data-ar')) {
+                el.innerText = el.getAttribute('data-ar');
             } else {
-                box.style.display = 'block';
-                if (method === 'bank') {
-                    bankInfo.style.display = 'block';
-                    mobileInfo.style.display = 'none';
-                } else if (method === 'jazzcash') {
-                    bankInfo.style.display = 'none';
-                    mobileInfo.style.display = 'block';
-                }
+                el.innerText = el.getAttribute('data-en');
+            }
+        });
+    }
+
+    let currentProductName = "";
+    let unitPrice = 0;
+
+    function selectProduct(name, price) {
+        currentProductName = name;
+        unitPrice = price;
+        updateTotal();
+        alert(name + " has been selected! Please check your quantity and fill in your delivery details below.");
+        window.location.href = '#order';
+    }
+
+    function updateTotal() {
+        var qty = document.getElementById('quantityInput').value;
+        if (qty < 1) qty = 1;
+        var total = unitPrice * qty;
+        if (currentProductName) {
+            document.getElementById('selectedProduct').value = currentProductName + " (Qty: " + qty + ") - Total: PKR " + total;
+        } else {
+            document.getElementById('selectedProduct').value = "Please select a product from above first";
+        }
+    }
+
+    function togglePaymentDetails() {
+        var method = document.getElementById('paymentMethod').value;
+        var box = document.getElementById('paymentInstructions');
+        var bankInfo = document.getElementById('bankInfo');
+        var mobileInfo = document.getElementById('mobileInfo');
+
+        if (method === 'cod') {
+            box.style.display = 'none';
+        } else {
+            box.style.display = 'block';
+            if (method === 'bank') {
+                bankInfo.style.display = 'block';
+                mobileInfo.style.display = 'none';
+            } else if (method === 'jazzcash') {
+                bankInfo.style.display = 'none';
+                mobileInfo.style.display = 'block';
             }
         }
-
-        function handleOrder(e) {
-            e.preventDefault();
-            alert("Success! Your order has been submitted. The SK Manufacturing team will contact you shortly.");
-            location.reload();
-        }
-        </script>
+    }
+</script>
 </html>
