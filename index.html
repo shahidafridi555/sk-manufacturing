@@ -296,23 +296,22 @@
     }
 
     function togglePaymentDetails() {
-        var method = document.getElementById('paymentMethod').value;
-        var box = document.getElementById('paymentInstructions');
-        var bankInfo = document.getElementById('bankInfo');
-        var mobileInfo = document.getElementById('mobileInfo');
+    var method = document.getElementById('paymentMethod').value;
+    var box = document.getElementById('paymentInstructions');
+    var jazzcashInfo = document.getElementById('jazzcashInfo');
+    var easypaisaInfo = document.getElementById('easypaisaInfo');
+    var bankInfo = document.getElementById('bankInfo');
 
-        if (method === 'cod') {
-            box.style.display = 'none';
-        } else {
-            box.style.display = 'block';
-            if (method === 'bank') {
-                bankInfo.style.display = 'block';
-                mobileInfo.style.display = 'none';
-            } else if (method === 'jazzcash') {
-                bankInfo.style.display = 'none';
-                mobileInfo.style.display = 'block';
-            }
-        }
+    if (method === 'cod') {
+        box.style.display = 'none';
+    } else {
+        box.style.display = 'block';
+        jazzcashInfo.style.display = (method === 'jazzcash') ? 'block' : 'none';
+        easypaisaInfo.style.display = (method === 'easypaisa') ? 'block' : 'none';
+        bankInfo.style.display = (method === 'bank') ? 'block' : 'none';
+    }
+}
+
     }
 </script>
 </html>
