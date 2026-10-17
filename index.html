@@ -332,7 +332,7 @@
     </div>
     
 
-    <!-- Footer ----------------------------------------------------->
+    <!-- Footer --------------------------------------------------------------------------->
     <footer>
         <p data-en="&copy; 2026 SK Manufacturing. All Rights Reserved. | Designed for Excellence" 
            data-ur="&copy; 2026 ایس کے مینوفیکچرنگ۔ جملہ حقوق محفوظ ہیں۔" 
@@ -341,9 +341,10 @@
         </p>
     </footer>
 
-    <!-- Custom Translation Script ----------------------------------------------->
     
-   <script>
+
+    <!-- Custom Translation Script ------------------------------------------------------------->
+    <script>
     function changeLanguage(lang) {
         const elements = document.querySelectorAll('[data-en]');
         elements.forEach(el => {
@@ -399,5 +400,30 @@
             if (bankInfo) bankInfo.style.display = (method === 'bank') ? 'block' : 'none';
         }
     }
+        
+        
+     /* Java Scripts **********************************************************************/
+        
+        function openPolicy(type) {
+    const modal = document.getElementById('policyModal');
+    const content = document.getElementById('policyContent');
+    modal.style.display = 'flex';
+
+    if(type === 'privacy') {
+        content.innerHTML = "<h2>Privacy Policy</h2><p>At Shahid Electric (SMC-Private) Limited, we value your privacy. We collect customer information such as name, contact number, and delivery address solely for processing order delivery and billing. We do not sell or share your personal data with third parties.</p>";
+    } else if(type === 'refund') {
+        content.innerHTML = "<h2>Return & Refund Policy</h2><p>We stand by the quality of our electrical and manufacturing products. If you receive a damaged or defective product, you may request a return or replacement within 7 days of delivery. Refunds will be processed to the original payment method after inspection.</p>";
+    } else if(type === 'shipping') {
+        content.innerHTML = "<h2>Shipping Policy</h2><p>All orders are processed within 24-48 hours. Orders are delivered across Pakistan within 5 to 7 business days. Delivery details and tracking info will be provided upon order confirmation.</p>";
+    } else if(type === 'terms') {
+        content.innerHTML = "<h2>Terms & Conditions</h2><p>By placing an order on our website, you agree to provide accurate delivery and contact details. All purchases are subject to product availability and payment verification.</p>";
+    }
+}
+
+function closePolicy() {
+    document.getElementById('policyModal').style.display = 'none';
+} 
+        
 </script>
+    
 </html>
