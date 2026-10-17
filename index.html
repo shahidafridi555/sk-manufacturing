@@ -159,6 +159,85 @@
                     <div class="price">PKR 280</div>
                     <button class="btn" onclick="selectProduct('SK Antibacterial Hand Wash (500ml)', 280)" data-en="Order Inquiry" data-ur="آرڈر کریں" data-ar="طلب استعلام">Order Inquiry</button>
                 </div>
+
+
+
+
+                <!-- PRODUCTS SECTION (8 Products) -->
+                
+                <h2>Our Products</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <h3>LED Bulb 12W</h3>
+            <p>PKR 350</p>
+            <button onclick="selectProduct('LED Bulb 12W', 350)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>LED Panel Light 18W</h3>
+            <p>PKR 850</p>
+            <button onclick="selectProduct('LED Panel Light 18W', 850)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>Circuit Breaker Single Pole</h3>
+            <p>PKR 450</p>
+            <button onclick="selectProduct('Circuit Breaker Single Pole', 450)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>Industrial Switch Gear Module</h3>
+            <p>PKR 4,500</p>
+            <button onclick="selectProduct('Industrial Switch Gear Module', 4500)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>Distribution Box (DB) 8-Way</h3>
+            <p>PKR 2,200</p>
+            <button onclick="selectProduct('Distribution Box (DB) 8-Way', 2200)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>Copper Electric Wire Roll 3/.029</h3>
+            <p>PKR 6,800</p>
+            <button onclick="selectProduct('Copper Electric Wire Roll 3/.029', 6800)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>Motor Protection Circuit Breaker (MPCB)</h3>
+            <p>PKR 3,200</p>
+            <button onclick="selectProduct('Motor Protection Circuit Breaker (MPCB)', 3200)">Select Product</button>
+        </div>
+        <div class="product-card">
+            <h3>Emergency Stop Switch Industrial</h3>
+            <p>PKR 950</p>
+            <button onclick="selectProduct('Emergency Stop Switch Industrial', 950)">Select Product</button>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT & ADDRESS SECTION -->
+<footer style="background:#222; color:#fff; padding:30px 20px; text-align:center; margin-top:50px;">
+    <h3>SK Manufacturing / Shahid Electric (SMC-Private) Limited</h3>
+    <p><strong>Office Address:</strong> Hub Industrial Area, Hub, Balochistan, Pakistan</p>
+    <p><strong>Phone:</strong> +92 300 1234567 | <strong>Email:</strong> info@shahidelectric.com</p>
+    <br>
+
+    <!-- FOOTER POLICY LINKS REQUIRED BY PAYFAST -->
+    <div class="policy-links" style="margin-top:15px;">
+        <a href="#privacy" onclick="openPolicy('privacy')" style="color:#00d1b2; margin:0 10px;">Privacy Policy</a> | 
+        <a href="#refund" onclick="openPolicy('refund')" style="color:#00d1b2; margin:0 10px;">Return & Refund Policy</a> | 
+        <a href="#shipping" onclick="openPolicy('shipping')" style="color:#00d1b2; margin:0 10px;">Shipping Policy</a> | 
+        <a href="#terms" onclick="openPolicy('terms')" style="color:#00d1b2; margin:0 10px;">Terms & Conditions</a>
+    </div>
+</footer>
+
+<!-- POLICY MODAL / POPUP -->
+<div id="policyModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:#fff; color:#333; padding:25px; width:90%; max-width:600px; max-height:80vh; overflow-y:auto; border-radius:8px; position:relative;">
+        <button onclick="closePolicy()" style="position:absolute; top:10px; right:15px; background:red; color:#fff; border:none; padding:5px 10px; cursor:pointer;">X</button>
+        <div id="policyContent"></div>
+    </div>
+</div>
+
+
+                
+
+                
             </div>
         </section>
 
